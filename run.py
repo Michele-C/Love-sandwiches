@@ -32,6 +32,7 @@ def validate_data(values):
     are not entered. 
     """
     try:
+        [int(value) for  value in values]
         if len(values) != 6:
             raise ValueError(
                 f"We expect 6 values and we only got {len(values)}"
@@ -41,3 +42,5 @@ def validate_data(values):
         print(f'Invalid data: {e}. Please try again.\n')
 
 get_sales_data()
+
+
